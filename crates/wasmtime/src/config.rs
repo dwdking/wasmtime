@@ -203,6 +203,11 @@ impl Config {
         ret
     }
 
+    /// Returns the curent version for the create
+    pub fn version() -> String {
+        env!("CARGO_PKG_VERSION").to_string()
+    }
+
     /// Sets the target triple for the [`Config`].
     ///
     /// By default, the host target triple is used for the [`Config`].
